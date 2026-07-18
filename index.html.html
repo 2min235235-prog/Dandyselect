@@ -1,3 +1,4 @@
+
 <title>Mrs.Dandy セラピスト画像合成ツール</title>
 <style>
   :root {
@@ -224,7 +225,7 @@
 
     <div class="download-area">
       <button id="downloadBtn" class="download-btn">画像をダウンロード</button>
-      <div class="drag-hint">PNG形式（フル解像度）で保存されます</div>
+      <div class="drag-hint">JPG形式（フル解像度）で保存されます</div>
     </div>
   </div>
 </div>
@@ -442,12 +443,12 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "MrsDandy_therapist.png";
+      a.download = "MrsDandy_therapist.jpg";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       setTimeout(() => URL.revokeObjectURL(url), 2000);
-    }, "image/png");
+    }, "image/jpeg", 0.92);
   });
 })();
 </script>
